@@ -5,8 +5,10 @@ import {
   MantineProvider,
   mantineHtmlProps,
 } from "@mantine/core";
+import { SettingsContextProvider } from "../store/settings";
 import { theme } from "@/theme";
 import "./globals.css";
+import Header from "@/components/layout/header/Header";
 
 export const metadata: Metadata = {
   title: "Dice Rolling App",
@@ -25,7 +27,12 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <SettingsContextProvider>
+          <MantineProvider theme={theme}>
+            <Header />
+            {children}
+          </MantineProvider>
+        </SettingsContextProvider>
       </body>
     </html>
   );
