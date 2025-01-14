@@ -1,3 +1,5 @@
+import AllDice from "@/components/dice/AllDice";
+
 export default function HomePage() {
-  return <>hello</>;
+  return <AllDice />;
 }
