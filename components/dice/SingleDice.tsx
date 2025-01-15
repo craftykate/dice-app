@@ -1,4 +1,4 @@
-import { Paper, Group, Center, ActionIcon } from "@mantine/core";
+import { Paper, Group, Center, ActionIcon, Button } from "@mantine/core";
 import { IconSettings } from "@tabler/icons-react";
 import DiceFace from "./DiceFace";
 
@@ -19,7 +19,10 @@ export default function SingleDice() {
       <Center>
         <DiceFace />
       </Center>
-      <Group>bottom row</Group>
+      <Group p="xs">
+        <Button variant="outline">Hold</Button>
+        <Button>Roll</Button>
+      </Group>
     </Paper>
   );
 }
